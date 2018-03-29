@@ -1,31 +1,34 @@
 //
-mainList = {
-	budget: 0,
-	nameMag: "",
-	shopGoods: shopGoods = [],
-	employers: employers = {},
-	open: true
+let money = prompt("Ваш бюджет?");
+let name = prompt("Название вашего магазина?");
+
+let mainList = {
+	budget: money,
+	nameMag: name,
+	shopGoods: [],
+	employers: {},
+	open: false
 }
 
 //
-budget = +prompt("Введите ваш бюджет");
-if (!isNaN(budget)){
-	alert ("Ваш бюджет " + (budget/30).toFixed(2) + " в день");
+if (!isNaN(money)){
+	alert ("Ваш бюджет " + (money/30).toFixed(2) + " в день");
 }
 else {
 	alert ("Вы ввели не число");
 }
 
 //
-nameMag = prompt("Введите название вашего магазина");
-
-//
 for (i=0;i<3;i++) {
-	 shopGoods[i] = prompt("Введите тип товара который будем покупать");
-	 if (isNaN(shopGoods[i])){}
+	 let a = prompt("Какой тип товара будем продавать?");
+	 if (isNaN(a)){
+	 	mainList.shopGoods[i] = a;
+	 }
 	 else {
 	 	alert ("Error! Введите тип товара");
 	 	i--;
 	 } 
 }
 
+
+console.log(mainList);
