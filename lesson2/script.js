@@ -43,7 +43,7 @@
 // пример 1
 // for (i=0;i<3;i++) {
 // 	 let a = prompt("Какой тип товара будем продавать?");
-// 	 if (isNaN(a)){
+// 	 if ((typeof(a))==='string'&& (typeof(a)) != null && a != '' && a.length < 50){ //--Исправил
 // 	 	mainList.shopGoods[i] = a;
 // 	 }
 // 	 else {
@@ -57,7 +57,7 @@
 // let j=1;
 // while (j<4) {
 // 	 let a = prompt("Какой тип товара будем продавать?");
-// 	 if (isNaN(a)){
+// 	 if ((typeof(a))==='string'&& (typeof(a)) != null && a != '' && a.length < 50){ //--Исправил
 // 	 	mainList.shopGoods[j] = a;
 // 	 	j++;
 // 	 }
@@ -73,7 +73,7 @@ let j=1;
 do{	
  	
 	let a = prompt("Какой тип товара будем продавать?");
-	if (isNaN(a)){
+	if ((typeof(a))==='string'&& (typeof(a)) != null && a != '' && a.length < 50){ //--Исправил
 		mainList.shopGoods[j] = a;
 	 	j++;
 	}

@@ -21,7 +21,7 @@ function start() {
 	
 	time = 21;
 }
-start();
+// start();
 
 let mainList = {
 	budget: money,
@@ -36,7 +36,7 @@ function chooseGoods(){
 	for (i=0;i<3;i++) {
 		let a = prompt("Какой тип товара будем продавать?");
 
-		if ((typeof(a))==='string'&& (typeof(a)) != null && a != ''){
+		if ((typeof(a))==='string'&& (typeof(a)) != null && a != '' && a.length < 50){
 			mainList.shopGoods[i] = a;
 		}
 		else {
