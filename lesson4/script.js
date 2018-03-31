@@ -81,15 +81,24 @@ let mainList = {
 		mainList.shopItems.sort();
 	},
 	feShopItems: function feShopItems(){
+		console.log("У нас вы можете купить: ");
 		mainList.shopItems.forEach(function(item,i){
-			console.log("У нас вы можете купить: " + (++i) +' ' + item + ';');
+			console.log((++i) +' ' + item + ';');
 		});
-	}
+	},
+	fiShopItems: function feShopItems(){
+			console.log("Наш магазин включает в себя: ");
+			for(let key in mainList.shopItems){
+				console.log((++key) +' ' + mainList.shopItems[--key]);
+			}
+		}
+
 
 }
-	// chooseShopItems();
-	
-
-console.log("проверка");
+	// Проверка
+ 	// mainList.chooseShopItems();	// ввод товаров
+	// mainList.feShopItems();		// проверка forEach
+	// mainList.fiShopItems();		// порокерка for in
+	// console.log("проверка");
 
 console.log(mainList);
