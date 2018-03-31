@@ -87,18 +87,18 @@ let mainList = {
 		});
 	},
 	fiShopItems: function fiShopItems(){
-			alert("Наш магазин включает в себя: ");
+			console.log("Наш магазин включает в себя: ");
 			for(let key in mainList){
-				alert( key +' ' + mainList[key]);
+				console.log( key +' ' + mainList[key]);
 			}
 		}
 
 
 }
 	// // Проверка
-	// mainList.chooseShopItems();		// ввод товаров
-	// mainList.feShopItems();			// проверка forEach
-	// mainList.fiShopItems();			// порокерка for in
-	// console.log("проверка");
+	mainList.chooseShopItems();		// ввод товаров
+	mainList.feShopItems();			// проверка forEach
+	mainList.fiShopItems();			// порокерка for in
+	console.log("проверка");
 
 console.log(mainList);
