@@ -21,7 +21,7 @@ function start() {
 	
 	time = 21;
 }
-// start();
+start();
 
 let mainList = {
 	budget: money,
@@ -32,20 +32,7 @@ let mainList = {
 	discount: false
 }
 
-function chooseGoods(){
-	for (i=0;i<3;i++) {
-		let a = prompt("Какой тип товара будем продавать?");
 
-		if ((typeof(a))==='string'&& (typeof(a)) != null && a != '' && a.length < 50){
-			mainList.shopGoods[i] = a;
-		}
-		else {
-			alert ("Error! Введите тип товара");
-			i--;
-			} 
-	}
-}
-chooseGoods();
 
 function workTime(time){
 	if (time < 0){
@@ -60,46 +47,48 @@ function workTime(time){
 }
 workTime(18);
 
-function dayBudget(x){
-	return x = (x/30).toFixed(2);
-}
+function dayBudget(){
+		alert("Ежедневный бюджет" + mainList.budget / 30);  // .toFixed(2)
+	}
+dayBudget();
 
 function makeDiscount(){
-price = 156;
-discount = true;
+		if(mainList.discount == true) {
+			price*=0.8;
+		} 
+	}
 
-(discount) ? price*=0.8 : price ;
-console.log(price);
-}
-makeDiscount();
 
 function hireEmployers(){
 	for (i=1;i<4;i++) {
-		let name = prompt("Имя сотрудника");
-		mainList.employers[i] = name;		
+			let name = prompt("Имя сотрудника");
+			mainList.employers[i] = name;
+		} 		
 	}
-}
 
-hireEmployers();
-// // пример 1
-// for (i=0;i<3;i++) {
-// 	 let a = prompt("Какой тип товара будем продавать?");
-// 	 console.log(typeof(a));
-// 	 if ((typeof(a))==='string'){
-// 	 	mainList.shopGoods[i] = a;
-// 	 }
-// 	 else {
-// 	 	alert ("Error! Введите тип товара");
-// 	 	i--;
-// 	 } 
-// }
+// hireEmployers();
+
+// пример 1
+
+
+	for (i=0;i<3;i++) {
+		let a = prompt("Какой тип товара будем продавать?");
+
+		if ((typeof(a))==='string'&& (typeof(a)) != null && a != '' && a.length < 50){
+			mainList.shopGoods[i] = a;
+		}
+		else {
+			alert ("Error! Введите тип товара");
+			i--;
+			} 
+	}
 
 
 // пример 2
 // let j=1;
 // while (j<4) {
 // 	 let a = prompt("Какой тип товара будем продавать?");
-// 	 if (isNaN(a)){
+// 	 if ((typeof(a))==='string'&& (typeof(a)) != null && a != '' && a.length < 50){
 // 	 	mainList.shopGoods[j] = a;
 // 	 	j++;
 // 	 }
@@ -114,7 +103,7 @@ hireEmployers();
 // do{	
  	
 // 	let a = prompt("Какой тип товара будем продавать?");
-// 	if (isNaN(a)){
+// 	if ((typeof(a))==='string'&& (typeof(a)) != null && a != '' && a.length < 50){
 // 		mainList.shopGoods[j] = a;
 // 	 	j++;
 // 	}
@@ -123,5 +112,4 @@ hireEmployers();
 // 	} 
 // }while (j<4);
 
-alert ("Ваш бюджет " + dayBudget(money) + " в день");
 console.log(mainList);
